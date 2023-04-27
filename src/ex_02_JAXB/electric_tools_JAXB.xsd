@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="power_tools" type="power_toolsType"/>
+  <xs:complexType name="modelType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Drill"/>
+            <xs:enumeration value="Screw gun"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="brand">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Makita"/>
+            <xs:enumeration value="Bosch"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="origin">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="China"/>
+            <xs:enumeration value="Poland"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="handy">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Double-handed"/>
+            <xs:enumeration value="One-handed"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="vitality"/>
+      <xs:element name="energy">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="consumption = 230 Volt"/>
+            <xs:enumeration value="consumption = 3Ah_Li-ion"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="power">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="requirement = 550 Watt"/>
+            <xs:enumeration value="requirement = 18 Volt"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="turnover">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="frequency = 0 - 4200 RPM"/>
+            <xs:enumeration value="frequency = 0 - 1700 RPM"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="rotation">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="moment = 65 Nm"/>
+            <xs:enumeration value="moment = 22 Nm"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="acoustic">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="capacity = 98 dB"/>
+            <xs:enumeration value="power = 45 dB"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="material">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="PVC and steel"/>
+            <xs:enumeration value="PVC"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="power_toolsType">
+    <xs:sequence>
+      <xs:element type="modelType" name="model" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

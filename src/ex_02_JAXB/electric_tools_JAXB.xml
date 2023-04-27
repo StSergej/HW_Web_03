@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<power_tools xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="electric_tools_JAXB.xsd">
+
+    <model id="1">
+        <name>Drill</name>
+        <brand>Makita</brand>
+        <origin>China</origin>
+        <handy>Double-handed</handy>
+        <vitality>Low</vitality>
+        <energy>consumption = 230 Volt</energy>
+        <power>requirement = 550 Watt</power>
+        <turnover>frequency = 0 - 4200 RPM</turnover>
+        <rotation>moment = 65 Nm</rotation>
+        <acoustic>capacity = 98 dB</acoustic>
+        <material>PVC and steel</material>
+    </model>
+
+    <model id="2">
+        <name>Screw gun</name>
+        <brand>Bosch</brand>
+        <origin>Poland</origin>
+        <handy>One-handed</handy>
+        <vitality>Low</vitality>
+        <energy>consumption = 3Ah_Li-ion</energy>
+        <power>requirement = 18 Volt</power>
+        <turnover>frequency = 0 - 1700 RPM</turnover>
+        <rotation>moment = 22 Nm</rotation>
+        <acoustic>power = 45 dB</acoustic>
+        <material>PVC</material>
+    </model>
+
+</power_tools>
